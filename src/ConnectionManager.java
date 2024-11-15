@@ -4,7 +4,7 @@
 import java.sql.*;
 
 public class ConnectionManager {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/mydb";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/employeemanagement";
     private static final String USER = "root"; 
     private static final String PASS = "password";
 
@@ -20,9 +20,9 @@ public class ConnectionManager {
            
             return conn;
         } catch (ClassNotFoundException ex) {
-            System.out.println("Class not found.");
+            System.out.println("Class not found: " + ex);
         }catch (SQLException ex) {
-            System.out.println("SQL Error.");
+            System.out.println("SQL Error: " + ex);
         }
         
         return null;
